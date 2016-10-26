@@ -1,0 +1,22 @@
+.drop{
+  width:500px;
+  height: 298px;
+  background-image: url(skate.jpg);
+}
+
+.balaye{
+  width: 248px;
+  height: 248px;
+  font-weight: bold;
+  color: brown;
+  background-image: url(balai.jpg);
+}
+
+strong{
+  color: red;
+}
+
+.gif{
+  width: 500px;
+  height: 298px;
+}

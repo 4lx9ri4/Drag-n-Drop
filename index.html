@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link type="text/css" rel="stylesheet" href="style.css"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+            <div class="drop"></div>
+
+            <img src="caillou.png" width="50" height="50" class="drag"/>
+            <img src="caillou.png" width="50" height="50" class="drag"/>
+            <img src="caillou.png" width="50" height="50" class="drag"/>
+            <img src="caillou.png" width="50" height="50" class="drag"/>
+            <img src="caillou.png" width="50" height="50" class="drag"/>
+
+            <button onclick="reload()" class="balaye">Balaye moi ça!!!</button>
+
+            <script>
+
+            function reload(){
+              location.reload();
+            }
+
+            $(function(){
+                var c = 0;
+                $(".drag") .draggable();
+                $(".drop") .droppable({
+
+                  drop:function(event, ui){
+                    c++;
+                    if(c==5){
+                      $(".drop").html("<strong><center>OUTCH !</center></strong>");
+                      $(".drop").append('<img src="chute.gif" class="gif"/>');
+                      $(".drag").hide();
+                    }
+                  }
+
+                });
+            });
+            </script>
+    </body>
+</html>
